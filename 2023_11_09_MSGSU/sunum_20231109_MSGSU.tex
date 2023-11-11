@@ -86,7 +86,7 @@
 \usepackage{physics}
 \usepackage{mathtools}
 \usepackage{xcolor}
-
+\usepackage{hyperref}
 \usepackage{outlines}
 
 
@@ -94,7 +94,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Kollektif Nötrino Salınımları]{\huge \textbf{KOLLEKTİF EVRİLEN NÖTRİNOLARIN ÇEŞNİ DÖNÜŞÜMÜ}\vspace{0.5cm}} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Süpernovada Spin-Çeşni Presesyon Faz Etkileri]{\huge \textbf{Süpernovada Spin-Çeşni Presesyon Faz Etkileri}} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{{\Large{İsmail Taygun Bulmuş}}\\MSGSÜ Fizik Bölümü\vspace{1cm}} % Your name
 \institute[MSGSÜ, Fizik Bölümü] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -116,10 +116,11 @@
     \begin{outline}
         \1[\textbullet] Giriş
         \1[\textbullet] Nötrino Salınım Kinematiği
-        \1[\textbullet] Salınım Hamiltonyen'i ve Madde Etkileşimleri
-        \2[\textendash] MSW Resonance
+        \1[\textbullet] Madde Etkileşimleri
+        \2[\textendash] MSW Rezonansı
         \1[\textbullet] $H_{\nu}+ H_{M}+ H_{EM}$
-        \2[\textendash] SFP Resonance
+        \1[\textbullet] MSW + SFP - Rezonanslar
+        \2[\textendash] SFP Rezonansı
         \1[\textbullet] Analitik öngörüler
         \1[\textbullet] Simülasyonlar
         \1[\textbullet] Olası Gözlemler
@@ -140,8 +141,7 @@
         \1[\textbullet] Landau-Zener geçiş olasılıkları ve adyabatiste kavramı
         \1[\textbullet] {\color{red}Stokes fazı ve çekirdek çökmeli süpernova (ÇÇSN) içerisinde faz etkileri}
         \1[\textbullet] {\color{red}İki çeşni yaklaşıklığı ve yaklaşıklığın geçerli olduğu durumlar}
-        \1[\textbullet] {\color{blue}Nötrino öz-kırılımının kollektif çeşni evrimine olan katkısı}
-        \1[\textbullet] {\color{cyan}Nötrinoların ÇÇSN çekirdek sentezindeki önemi}
+        \1[\textbullet] {\color{blue}Gerçekçi profil kullanarak faz etkilerine bir bakış ve olası gözlemler}
     \end{outline}
 \end{frame}
 
@@ -223,7 +223,7 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{Salınım Hamiltonyen'i ve Madde Etkileşimleri}
+    \frametitle{Madde Etkileşimleri}
 (Anti)Nötrino boşluk Hamiltonyen'i
 \begin{align*}
     \hat{H}_{\nu} & = \sum^{4}_{i=1} \frac{m_{i}^{2}}{2E} \dyad{\nu_{i}}{\nu_{i}}\\
@@ -236,12 +236,10 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{Salınım Hamiltonyen'i ve Madde Etkileşimleri}
+    \frametitle{Madde Etkileşimleri}
     \begin{outline}
         \1[\textbullet] Majorana Nötrinoları (Sıfır CP fazı)
-        \1[\textbullet] İki çeşni, $ \nu_{e}, \nu_{x} $ ($2$ nötrino $, 2 $ antinötrino)
-        \1[\textbullet] Atmosferik kütle kare farkı, $ \delta m^{2}= 2.56 \time 10^{-15} $ MeV$ ^{2} $
-        \1[\textbullet] Karışım açısı, $ \theta=8^{\circ}  $
+        \1[\textbullet] Dört "çeşni", $ \nu_{e}, \nu_{x} $ ($2$ nötrino $, 2 $ antinötrino)
         \1[\textbullet] Normal veya ters hiyerarşi
     \end{outline}
     \begin{figure}[hbt!]
@@ -250,7 +248,7 @@ Liouville - von Neumann denklemi
     \end{figure}
 \end{frame}
 \begin{frame}
-    \frametitle{Salınım Hamiltonyen'i ve Madde Etkileşimleri}
+    \frametitle{Madde Etkileşimleri}
     Boşluk ve madde etkileşim Hamiltonyen'i
     \tiny
     \begin{align*}
@@ -271,7 +269,7 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{Salınım Hamiltonyen'i ve Madde Etkileşimleri}
+    \frametitle{Madde Etkileşimleri}
     \hrulefill
     \tiny
     \begin{align*}
@@ -361,65 +359,8 @@ Liouville - von Neumann denklemi
     Burada $ \gamma = \theta_{M} - \overline{\theta}_{M} $.
 \end{frame}
 
-\begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Tedirgeme}
-    \begin{minipage}{0.45\textwidth}
-        Baz geçiş diyagramı
-        \begin{figure}[hbt!]
-            \centering
-            \includegraphics[width=.9\textwidth]{fig/tedirgemeDiagram.png}
-        \end{figure}
-        Tedirgeme yönteminin geçerli olduğu koşul.
-        \begin{equation*}
-            \abs{c_{\gamma}~\mu B}, \abs{s_{\gamma}~\mu B}  \ll \abs{\omega_{i}-\omega_{j}}
-        \end{equation*}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.45\textwidth}
-        \color{lightgray}
-        Özdurumlar
-        \tiny
-        \begin{equation*}
-            \mqty(
-                \frac{1}{N_{1}}\ket{\nu^{EM}_{1}}\\
-                \frac{1}{N_{2}}\ket{\nu^{EM}_{2}}\\
-                \frac{1}{N_{3}}\ket{\nu^{EM}_{3}}\\
-                \frac{1}{N_{4}}\ket{\nu^{EM}_{4}}) =
-            \mqty(
-                \ket{\nu^{M}_{1}}\\
-                \ket{\nu^{M}_{2}}\\
-                \ket{\nu^{M}_{3}}\\
-                \ket{\nu^{M}_{4}})
-            + \mu B s_{\gamma} \mqty(
-                    \ket{\nu^{M}_{3}}/\delta \omega_{13} \\
-                    \ket{\nu^{M}_{4}}/\delta \omega_{24} \\
-                    \ket{\nu^{M}_{1}}/\delta \omega_{31} \\
-                    \ket{\nu^{M}_{2}}/\delta \omega_{42})
-        \end{equation*}
-            \begin{equation*}
-            \hspace{1.5cm}+ \mu B c_{\gamma} \mqty(
-            \ket{\nu^{M}_{4}}/\delta \omega_{14} \\
-            \ket{\nu^{M}_{3}}/\delta \omega_{23} \\
-            \ket{\nu^{M}_{2}}/\delta \omega_{32} \\
-            \ket{\nu^{M}_{1}}/\delta \omega_{41})
-        \end{equation*}
-        \begin{equation*}
-            + (\mu B)^{2} \frac{\sin 2\gamma}{2} \mqty(\frac{\delta \omega_{13} - 
-            \delta \omega_{14}}{\delta \omega_{12} \delta \omega_{13} 
-            \delta \omega_{14}} \ket{\nu^{M}_{2}} \\
-            \frac{\delta \omega_{23} - \delta \omega_{24}}{\delta \omega_{21} 
-            \delta \omega_{23} \delta \omega_{24}} \ket{\nu^{M}_{1}} \\
-            \frac{\delta \omega_{32} - \delta \omega_{31}}{\delta \omega_{34} 
-            \delta \omega_{31} \delta \omega_{32}} \ket{\nu^{M}_{4}} \\
-            \frac{\delta \omega_{42} - \delta \omega_{41}}{\delta \omega_{43} 
-            \delta \omega_{41} \delta \omega_{42}} \ket{\nu^{M}_{3}})
-        \end{equation*}
-        \normalsize
-    \end{minipage}
-\end{frame}
-
 \begin{frame}[noframenumbering]
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Tedirgeme}
+    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Tedirgeme Çözümü}
     \begin{minipage}{0.45\textwidth}
         Baz geçiş diyagramı
         \begin{figure}[hbt!]
@@ -494,42 +435,22 @@ Liouville - von Neumann denklemi
     {\tiny Burada $ P(r) \equiv -\sqrt{2}G_{F}(1-2Y_{e})N_{b}(r) $ ve $ \kappa_{1,2} \equiv \mp 2\Delta c_{2\theta} $}
     
     \textbf{Eksponansiyel baryon profili, sabit manyetik çözümü}
-    \scriptsize
+    \tiny
     \begin{align*}
         \nu_{i}(r) & = N_{1}^{\xi^{+}_{i}}~ _{1}F_{1}\left(\xi^{+}_{i}; 
         1+2\xi^{+}_{i}-\kappa_{i};\frac{-iP(r)}{\alpha} \right) + N_{2}^{\xi^{-}_{i}} ~ _{1}F_{1}\left(\xi^{-}_{i}; 1+2\xi^{-}_{i}-
         \kappa_{i};\frac{-iP(r)}{\alpha}\right)
     \end{align*}
     {\tiny Burada $\xi^{\mp}_{i} \equiv \frac{i(\kappa_{i} \mp \sqrt{(2\mu B)^{2} + 
-    \kappa^{2}_{i} } )}{2\alpha}$ ve $ _{1}F_{1} $ Kummer fonksiyonları.}
+    \kappa^{2}_{i} } )}{2\alpha}$ ve $ _{1}F_{1} $ Kummer fonksiyonları.\\}
+    \normalsize
+    \textbf{Aynı eksponansiyel manyetik alan ve baryon profili için çözümler}\\
+    {\scriptsize Genelleştirilmiş hipergeometrik fonksiyonlar ve birleşmiş Laguerre polinomları.}
     \normalsize
 \end{frame}
 
 \begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Tam Çözüm}
-    Hareket denklemi
-    \scriptsize
-    \begin{align*}
-        i\dv{}{r} \mqty(\ket{\nu_{e}} \\ \ket{\nu_{\bar{x}}}) &= 
-        \mqty(0 & \mu B \\ \mu B & 2\Delta c_{2\theta}-V_{CC}-2V_{NC}    ) 
-        \mqty(\ket{\nu_{e}}\\ \ket{\nu_{\bar{x}}})
-    \end{align*}
-    \normalsize
-    İkinci dereceden diferansiyel denklem
-    \scriptsize
-    \begin{equation*}
-        \dv[2]{\nu_{i}}{r} + \left(i\kappa_{i}+iP(r) + \frac{\dv{B}{r}}{B(r)}\right) 
-    \dv{\nu_{i}}{r}+ (\mu B(r))^{2}~ \nu_{i} = 0
-    \end{equation*}
-    \normalsize
-    {\tiny Burada $ P(r) \equiv -\sqrt{2}G_{F}(1-2Y_{e})N_{b}(r) $ ve $ \kappa_{1,2} \equiv \mp 2\Delta c_{2\theta} $}
-    
-    \textbf{Aynı eksponansiyel manyetik alan ve baryon profili için çözümler}
-    Genelleştirilmiş hipergeometrik fonksiyonlar ve birleşmiş Laguerre polinomları.
-\end{frame}
-
-\begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - SFP Rezonansı}
+    \frametitle{SFP Rezonansı}
     \hrulefill
     
     \tiny
@@ -569,7 +490,7 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}[noframenumbering]
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - SFP Rezonansı}
+    \frametitle{SFP Rezonansı}
     \hrulefill
     
     \tiny
@@ -612,15 +533,19 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Rezonanslar}
+    \frametitle{MSW + SFP - Rezonanslar}
     \begin{figure}[hbt!]
         \centering
         \includegraphics[width=\textwidth]{fig/rezonanslar.png}
     \end{figure}
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[width=.6\textwidth]{fig/resonance_nb_Ye.pdf}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Rezonanslar}
+    \frametitle{MSW + SFP - Rezonanslar}
     Landau - Zener geçiş olasılığı, adyabatisiteye bağlıdır. Şartlar:
     \scriptsize
     \begin{enumerate}
@@ -652,7 +577,7 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{$H_{\nu}+ H_{M}+ H_{EM}$ - Rezonanslar}
+    \frametitle{MSW + SFP - Rezonanslar}
     Landau - Zener geçiş olasılığı, adyabatisiteye bağlıdır. Şartlar:
     \scriptsize
     \begin{enumerate}
@@ -678,33 +603,17 @@ Liouville - von Neumann denklemi
     \begin{outline}
         \1[\checkmark] Giriş
         \1[\checkmark] Nötrino Salınım Kinematiği
-        \1[\checkmark] Salınım Hamiltonyen'i ve Madde Etkileşimleri
-        \2[\textendash] MSW Resonance
+        \1[\checkmark] Madde Etkileşimleri
+        \2[\checkmark] MSW Rezonansı
         \1[\checkmark] $H_{\nu}+ H_{M}+ H_{EM}$
-        \2[\textendash] SFP Resonance
+        \1[\checkmark] MSW + SFP - Rezonanslar
+        \2[\checkmark] SFP Rezonansı
         \1[\textbullet] Analitik öngörüler
         \1[\textbullet] Simülasyonlar
-        \1[\textbullet] Çekirdek Sentezlenmesi
+        \1[\textbullet] Olası Gözlemler
+        \1[\textbullet] Sonuçlar
     \end{outline}
 \end{frame}
-
-
-%\begin{frame}
-%    \frametitle{Analitik Öngörüler}
-%    Yoğunluk operatörü başlangıçta aşağıdaki gibi yazılır.
-%    \begin{align*}
-%        \hat{\rho}(R) = & \sum_{i,j} \mel{E_{i}(R)}{\hat{\rho}}{E_{j}(R)} \dyad{\Psi_{i}(R)}{\Psi_{j}(R)}\\
-%                      = & \sum_{i,j} \rho_{ij}(R) \dyad{\Psi_{i}(R)}{\Psi_{j}(R)}
-%    \end{align*}
-%    Yoğunluk operatörü konuma bağlı evrilir.
-%    \begin{equation*}
-%        \hat{\rho}(r)= \sum_{a,b}\sum_{i,j}\qty(A_{ai}(r) \rho_{ij}(R) A^{\dagger}_{jb}(r)) C_{ij}(E)
-%        \dyad{E_{i}(r)}{E_{j}(r)}
-%    \end{equation*}
-%    Burada $ C_{ij}(E)= \exp(-i\int^{r}_{R} \qty(E_{a}(x)- E_{b}(x)) \dd{x}) $.
-%
-%    $ A_{ij} $, özdurumların, $ \ket{E_{i}} $, birbirlerine geçiş genliğini veren matristir.
-%\end{frame}
 
 \begin{frame}
     \frametitle{Analitik Öngörüler - Adyabatik Evrim}
@@ -741,6 +650,18 @@ Liouville - von Neumann denklemi
     \begin{figure}[hbt!]
         \centering
         \includegraphics[width=\textwidth]{fig/rhoSFPMSW.png}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Analitik Öngörüler - Kısmen-Adyabatik Evrim}
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[width=.65\textwidth]{fig/rhoSFPMSW.png}
+    \end{figure}
+    \begin{figure}[hbt!]
+        \centering
+        \includegraphics[width=.4\textwidth]{fig/3.pdf}
     \end{figure}
 \end{frame}
 
@@ -908,12 +829,12 @@ Liouville - von Neumann denklemi
 
 \begin{frame}
     \frametitle{Simülasyonlar - ÇÇSN}
-    \begin{minipage}{0.45\textwidth}
+    \begin{minipage}{0.5\textwidth}
         \footnotesize
         \begin{outline}
-            \1[\textbullet] Süpernova Evrelerinin Kısa Özeti
+            \1[\textbullet] \href{https://irfu.cea.fr/dap/Phocea/Vie_des_labos/Ast/ast_sstechnique.php?id_ast=4058}{\color{blue}Çekirdek çökmesinden hemen öncesi}
             \1[\textbullet] Çökme (Collapse)
-            \1[\textbullet] Sekme (Bouncing)
+            \1[\textbullet] Sekme (Bouncing): \href{https://www.youtube.com/clip/Ugkx3nDxd0FXSw_dHn3UGCC0UW8JQ9UhjZn3}{\color{blue}Video}
             \1[\textbullet] Şok Dalgası Oluşumu
             \1[\textbullet] Nötrino Patlaması \\(Neutrino Burst)
             \1[\textbullet] Nötrino Isıtması  \\(Neutrino Heating)
@@ -937,12 +858,23 @@ Liouville - von Neumann denklemi
 
 \begin{frame}
     \frametitle{Simülasyonlar - Başlangıç Koşulları}
-    Oyuncak model için başlangıç koşulları
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=.7\textwidth]{fig/baslangicKosullari.png}
-    \end{figure}
-    Fazları ortaya çıkarmak için ($B= 10^{15} (r_{Mag} \text{ [km]}/r)^{2}$ Gauss). Aşağıdaki değişkenler [km] birimindedir.
+    Simülasyonlarda kullanılan başlangıç koşulları
+    \begin{table}[hbt!]
+        \begin{tabular}{|c|c|}
+            \hline Çeşni Sayısı  & $4$ \\
+            \hline Hiyerarşi & Normal \\
+            \hline $\theta$ & $0.14$ \\
+            \hline $\delta m^{2}$ & $2.4 \times 10^{-15}$ \\
+            \hline Manyetik Alan & $10^{15}$ (r$_{\text{mag}}$ \text{ [km]}/$r$)$^{2}$ \\
+            \hline Yoğunluk & $n_{0}e^{r/r_{\text{mat}}}$ \\
+            \hline $Y_{e}$ & $0.45$\\
+            \hline Hiyerarşi & Normal \\
+            \hline
+        \end{tabular}
+        %\caption{\label{tab:}Caption.}
+    \end{table}
+
+    Bir sonraki slayttaki grafiğin açıklaması ($15$ MeV, $r_{f}\approx850$ km).
     \begin{figure}[hbt!]
         \centering
         \includegraphics[width=\textwidth]{fig/baslangicKosullari9x9.png}
@@ -950,80 +882,85 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - theta0expNbB}
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/P_ebeb2dist_initEbEb_10MeV_t3s_theta0.pdf}
-    \end{figure}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Simülasyonlar - theta0expNbB}
+    \frametitle{Simülasyonlar - Sıfır Karışım Açısı}
     \hrulefill
     \tiny
 
     \begin{equation*}
-        \hat{\overline{\rho}}(\infty) = {\color{blue}\hat{\overline{\rho}}_{\text{ort}}(r)} \pm {\color{red}\hat{\overline{\rho}}_{\text{hata}}(r)}
+        \hat{\overline{\rho}}(\infty) = {\color{red}\hat{\overline{\rho}}_{\text{ort}}(r)} \pm {\color{pink}\hat{\overline{\rho}}_{\text{hata}}(r)}
     \end{equation*}
     \normalsize
     \hrulefill
     \begin{figure}[hbt!]
         \centering
-        \includegraphics[width=\textwidth]{fig/theta0expNbB_energySpec_theta0_averaged.pdf}
+        \includegraphics[width=1\textwidth]{fig/4.pdf}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - theta014expNbB, $t=5$ s}
+    \frametitle{Simülasyonlar - Sıfır Karışım Açısı}
     \begin{figure}[hbt!]
         \centering
-        \includegraphics[width=\textwidth]{fig/theta014expNbB_9x9_10MeV.pdf}
+        \includegraphics[width=.6\textwidth]{fig/5.pdf}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - theta014expNbB, $t=5$ s}
-    Boşluk karışım açısı sıfırdan farklı olduğunda hem SFP hem de MSW rezonansları meydana gelir.
-    \begin{align*}
-        \Delta r_{MSW}/2 =& \frac{-r_{mat}}{2} \ln(\frac{c_{2\theta} - s_{2\theta}}{c_{2\theta} + s_{2\theta}}) \\
-        \Delta r_{SFP}/2 =& \frac{-r_{mat}}{2} \ln(\frac{\Delta c_{2\theta}-\mu B_{1}}{\Delta c_{2\theta}+\mu B_{1}}) \\
-        \eval{\frac{\abs{r^{SFP} - r^{MSW}}}{r^{SFP}_{hw}+r^{MSW}_{hw}}}_{t=1,3,5 \text{ s}} =& 3.31\text{, } 2.60\text{, } 2.24
-    \end{align*}
-\end{frame}
-
-\begin{frame}[noframenumbering]
-    \frametitle{Simülasyonlar - theta014expNbB, $t=1,3,5$ s}
-    Baryon yoğunluğu azaldığında SFP ve MSW rezonansları yakınlaşır.
+    \frametitle{Simülasyonlar - $\theta\ne0$, $t=1,3,5$ s}
+    Baryon yoğunluğu azaldığında SFP ve MSW rezonansları üst üste biner.
     \begin{figure}[hbt!]
         \centering
         \includegraphics[width=.7\textwidth]{fig/widthCompare3_nbInverted_40MeV_IH_t135s_sqr_croped.pdf}
     \end{figure}
+
 \end{frame}
 
-\begin{frame}
-    \frametitle{Simülasyonlar - theta014expNbB, $t=1$ s}
-    \hrulefill
-    \tiny
+\begin{frame}[noframenumbering]
+    \frametitle{Simülasyonlar - MSW ve SFP Rezonansları}
     
-    NH: $\nu_{\bar{e}} \rightarrow \nu_{x} \rightarrow \nu_{e} $, \qquad IH: $\nu_{e} \rightarrow \nu_{\bar{x}} \rightarrow \nu_{\bar{e}} $\\
-    \hrulefill
-    \normalsize
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/theta014expNbB_t1s_energySpec_theta0_averaged.png}
-    \end{figure}
+    Boşluk karışım açısı sıfırdan farklı olduğunda hem SFP hem de MSW rezonansları meydana gelir. Süre geçtikçe de rezonanslar üst üste binmeya başlar.
+
+    \begin{align*}
+        \eval{\frac{\abs{r^{SFP} - r^{MSW}}}{r^{SFP}_{hw}+r^{MSW}_{hw}}}_{t=1,3,5 \text{ s}} =& 3.31\text{, } 2.60\text{, } 2.24
+    \end{align*}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - theta014expNbB, $t=3$ s}
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/theta014expNbB_t3s_energySpec_theta0_averaged.png}
-    \end{figure}
+    \frametitle{Simülasyonlar - $\theta\ne0$, $\mu=1\times10^{-16}\mu_{B}$ }
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/6_1.pdf}
+        \end{figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/6_2.pdf}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - theta014expNbB, $t=5$ s}
+    \frametitle{Simülasyonlar - $\theta\ne0$, $\mu=10\times10^{-16}\mu_{B}$ }
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/8_1.pdf}
+        \end{figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/8_2.pdf}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Simülasyonlar - $\theta\ne0$, $\mu=10\times10^{-16}\mu_{B}$, $t=3$ s}
     \begin{figure}[hbt!]
         \centering
         \includegraphics[width=\textwidth]{fig/theta014expNbB_energySpec_theta0_averaged.pdf}
@@ -1031,47 +968,64 @@ Liouville - von Neumann denklemi
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - Fermi-Dirac Dağılımı, $t=1,2,3$ s}
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/yatayFermiSpec_t135.png}
-    \end{figure}
+    \frametitle{Simülasyonlar - FD Dağılımı, $t=1,3,5$ s, $\mu=5\time10^{-15}\mu_{B}$}
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/9_1.pdf}
+        \end{figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/9_2.pdf}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Simülasyonlar - t5sCollnuNoB}
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/t5sCollnuNoB_spectrum.pdf}
-    \end{figure}
-\end{frame}
-\begin{frame}
-    \frametitle{Simülasyonlar - t5sCollnuB}
-    \begin{figure}[hbt!]
-        \centering
-        \includegraphics[width=\textwidth]{fig/t5sCollnuB_spectrum.pdf}
-    \end{figure}
-\end{frame}
+    \frametitle{Simülasyonlar - Gözlem - DUNE}
+    \hrulefill
+    \tiny
 
-\begin{frame}
-   AA
+    \begin{align*}
+        \nu_{e} +~ ^{40}\!Ar \rightarrow~ ^{40}\!K^{*} + e^{-}\\
+        \bar{\nu}_{e} +~ ^{40}\!Ar \rightarrow~ ^{40}\!Cl^{*} + e^{+}
+    \end{align*}
+    \normalsize
+    \hrulefill
+    
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/10_1.pdf}
+        \end{figure}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \begin{figure}[hbt!]
+            \centering
+            \includegraphics[width=\textwidth]{fig/10_2.pdf}
+        \end{figure}
+    \end{minipage}
 \end{frame}
 
 \begin{frame}
     \frametitle{Sonuçlar}
     \scriptsize
     \begin{outline}
-        \1[\textbullet] Düşük manyetik alan için {\color{red}tedirgenmiş çözümler} elde ettik.
-        \1[\textbullet] {\color{red}Eksponansiyel azalan baryon profili ve sabit manyetik alan için analitik çözümlerin} Kummer fonksiyonları cinsinden yazılabildiğini bulduk.
-        \1[\textbullet] Adyabatik olmayan çeşni evriminde yoğunluk matrisinin analitik ifadesini elde ettik. Stokes fazını ve donmuş fazı hata olarak adlandırıp ortalama sonuçlara ekledik.
-        \1[\textbullet] {\color{red}Analitik sonuçlar ile sayısal sonuçları karşılaştırdık.} Sonuçlarımız sıfır {\color{red}boşluk karışım açısı ve $ t=1,2,3 $ s} profilleri için tutarlı olduğunu gördük.
-        \1[\textbullet] {\color{red}$ t=4,5 $ s profilleri için üç çeşni etkileri} ortaya çıkmaktadır. Üç çeşni etkileri SFP ve MSW rezonansların birbirine yakınlaşmasından kaynaklandığını bulduk ve yakınlık derecesini niceliksel olarak belirledik.
+        \1[\textbullet] Sadece SFP rezonansını kısmi adyabatik durumda inceledik. {\color{red}Analitik sonuçlar ile sayısal sonuçları karşılaştırdık.}
+        \1[\textbullet] Yarı adyabatik SFP ve MSW rezonansları meydana geldiği simülasyonlarda, Stokes fazının etkileri ortaya çıkmaktadır. İki rezonans yakınlaştığında LZ geçiş olasılık teorisi geçerli değildir. 
+        \1[\textbullet] Analitik öngörülerin çalışabilmesi için SFP ve MSW rezonanslarının birbirine yakınlaşmaması gerekir.
+        \1[\textbullet] Süpernovadan Dünya'ya gelen nötrinoların enerji spektrumlarından, süpernova dinamikleri hakkında kesin bilgi almak oldukça zor.
+        \1[\textbullet] Dünya'dan yapılan süpernovada nötrino gözlemlerinde faz etkileri şuanlık gözlemlenemez.
     \end{outline}
     
     Bir sonraki adımda 
     \begin{outline}
-        \1[\textbullet] SFP ile MSW rezonansı arasında kalan donmuş fazların çeşni evrimine olan katkısı incelenecektir.
-        \1[\textbullet] Elektron kesrinin ani değişiminden kaynaklanan süreksizlikler ve çeşni evrimine olan etkisine bakılacaktır.
+        \1[\textbullet] 3 özdurumlu durumlarda LZ geçişleri ve yoğunluk matrisinin tekrar inşası,
+        \1[\textbullet] Elektron kesrinin, $Y_{e}$, ani değişiminden kaynaklanan süreksizlikler ve çeşni evrimine olan etkisi,
     \end{outline}
     \normalsize
     
@@ -1088,6 +1042,7 @@ Liouville - von Neumann denklemi
     \frametitle{Referanslar}
     \footnotesize
     \begin{itemize}
+        \item[] [Bulmus, 2022] Spin-Flavor Precession Phase Effects in Supernova, arXiv: \href{https://arxiv.org/abs/2208.06926}{2208.06926}
         \item[] [Raffelt, 1996] G. G. Raffelt, Stars as laboratories for fundamental physics: The astrophysics of neutrinos, axions, and other weakly interacting particles. University of Chicago press, 1996.        
         \item[] [Giunti, 2007] C. Giunti and C. W. Kim, Fundamentals of Neutrino Physics and Astrophysics. Oxford University Press, 2007.        
         \item[] [Rubbmark, 1981]  J. R. Rubbmark, M. M. Kash, M. G. Littman, and D. Kleppner, “Dynamical effects at avoided level crossings: A study of the Landau-Zener effect using Rydberg atoms,” Physical Review A, vol. 23, pp. 3107-3117, June 1981.
